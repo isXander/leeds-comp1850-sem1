@@ -15,7 +15,7 @@ while True:
     try:
         monthly_goal = int(monthly_goal_str)
     except ValueError:
-        print(f"'{monthly_goal_str}' is not a valid integer!")
+        print(f"Invalid amount: '{monthly_goal_str}' is not a valid integer!")
         continue
     if monthly_goal < 1:
         print("You need to provide a positive integer.")
@@ -31,6 +31,6 @@ print(f"With a monthly saving of £{monthly_goal}, you will save £{yearly_savin
 
 # Calculate the total amount of money including interest (0.8% of the final annual amount) they will have saved in a year.
 # print this out in the format £X.XX (to two decimal places).
-yearly_savings_with_interest = yearly_savings * 1.08
+yearly_savings_with_interest = yearly_savings * 1.008
 interest_only = yearly_savings_with_interest - yearly_savings
 print(f"When accounting for interest, you will have saved £{yearly_savings_with_interest:0.2f}. That's £{interest_only:0.2f} of interest!")
