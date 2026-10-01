@@ -10,6 +10,18 @@ food_cost_input = input("Food cost in pounds: ")
 accommodation_cost_input = input("Accommodation cost in pounds: ")
 
 # TODO: convert each value to a number type that supports decimals
+travel_cost = float(travel_cost_input)
+food_cost = float(food_cost_input)
+accommodation_cost = float(accommodation_cost_input)
+
 # TODO: calculate the total and the average spend per category
+total_cost = travel_cost + food_cost + accommodation_cost
+average_cost = total_cost / 3
+
 # TODO: print the three costs, the total, and the average
 # Extension: format the totals to two decimal places
+print(f"Travel cost: {travel_cost:.2f}")
+print(f"Food cost: {food_cost:.2f}")
+print(f"Accommodation cost: {accommodation_cost:.2f}")
+print(f"Total cost: {total_cost:.2f}")
+print(f"Average cost: {average_cost:.2f}")
