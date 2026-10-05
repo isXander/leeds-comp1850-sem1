@@ -27,7 +27,6 @@ const M: Record<string, string> = {
 const Ux = X.filter(x => !M[x]);
 
 function bfsAugmentingPath(): string[] | undefined {
-  let P = [];
   let visited = [];
   let L = ['2', '5'];
   visited.push(L);
@@ -65,7 +64,7 @@ function bfsAugmentingPath(): string[] | undefined {
           console.log(`L = ${L}`);
         } else {
           console.log(`${b} is not in M`);
-          P = [b];
+          let P = [b];
           console.log(`P = ${P}`);
           let c = b;
           console.log(`c = ${c}`);
