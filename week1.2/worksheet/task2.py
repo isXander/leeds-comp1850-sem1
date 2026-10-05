@@ -15,9 +15,9 @@ minimum = min(numbers)
 maximum = max(numbers)
 mean = sum(numbers) / len(numbers)
 median = numbers_sorted[len(numbers) // 2]
-if len(numbers) % 2 == 1:
-    upper_median = numbers_sorted[len(numbers) // 2 + 1]
-    median = (median + upper_median) / 2
+if len(numbers) % 2 == 0:
+    lower_median = numbers_sorted[len(numbers) // 2 - 1]
+    median = (lower_median + median) / 2
 
 print(f"Minimum = {minimum}")
 print(f"Maximum = {maximum}")
