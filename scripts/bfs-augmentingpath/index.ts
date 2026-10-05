@@ -29,7 +29,7 @@ const Ux = X.filter(x => !M[x]);
 function bfsAugmentingPath(): string[] | undefined {
   let visited = [];
   let L = ['2', '5'];
-  visited.push(L);
+  visited.push(...L);
 
   let pred: Record<string, string> = {};
 
@@ -77,6 +77,7 @@ function bfsAugmentingPath(): string[] | undefined {
             console.log(`P = ${P}`);
           }
           console.log(`path found`);
+          console.log(`visited = ${visited}`);
           return P;
         }
       }
