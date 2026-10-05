@@ -11,8 +11,7 @@ try:
     if int_grade < 0 or int_grade > 100:
         raise ValueError()
 except ValueError:
-    print("Grade must be an integer between 0 and 100")
-    sys.exit()
+    sys.exit("Grade must be an integer between 0 and 100")
 
 if int_grade < 40:
     grade = "Fail"
