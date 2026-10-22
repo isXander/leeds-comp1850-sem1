@@ -20,7 +20,13 @@ def currency_converter(amount, from_currency, to_currency):
 
     # your code here
 
-    return None
+    if amount < 0:
+        return 0
+
+    if conversion_rate[from_currency] is None or conversion_rate[to_currency] is None:
+        return 0
+
+    return amount * conversion_rate[from_currency][to_currency]
 
 # Submit only this file currency_converter.py with the completed function.
 
